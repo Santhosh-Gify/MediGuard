@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "MediGuard Mobile"
+description = "A calm, image-first healthcare companion for Patients, Caretakers, and Doctors with medication scheduling, persistent medication events, relationship-aware access, voice responses, SOS, inventory, and visual adherence history."
+version = "1.0.0"
+id = "artifacts/mediguard-mobile"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 18665
+
+[services.development]
+run = "pnpm --filter @workspace/mediguard-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mediguard-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/mediguard-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "18665"
+BASE_PATH = "/"
