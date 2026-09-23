@@ -1,0 +1,1 @@
+- [MediGuard QR connection](mediguard-qr.md) — keep manual usercode entry available alongside any future native camera scanner.
