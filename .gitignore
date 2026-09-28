@@ -32,6 +32,17 @@ node_modules
 /connect.lock
 /coverage
 /libpeerconnection.log
+# lockfiles from other package managers (pnpm is used)
+package-lock.json
+yarn.lock
+
+# environment variables
+.env
+.env*.local
+
+# Vercel
+.vercel
+
 npm-debug.log
 yarn-error.log
 testem.log
