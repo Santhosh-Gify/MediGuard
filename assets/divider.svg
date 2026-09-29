@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 50" width="1200" height="50">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B04468" stop-opacity="0"/><stop offset=".5" stop-color="#B04468"/><stop offset="1" stop-color="#B04468" stop-opacity="0"/></linearGradient></defs>
+<style>
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.15)}}
+@keyframes trace{0%{stroke-dashoffset:300}60%,100%{stroke-dashoffset:0}}
+.c{transform-box:fill-box;transform-origin:center;animation:beat 2.4s ease-in-out infinite}
+</style>
+<path d="M0,25 H520 L540,25 L552,12 L566,38 L580,25 H600" fill="none" stroke="url(#g)" stroke-width="2" opacity=".35"/>
+<path d="M600,25 H620 L634,25 L646,12 L660,38 L672,25 H1200" fill="none" stroke="url(#g)" stroke-width="2" opacity=".35"/>
+<path d="M0,25 H520 L540,25 L552,12 L566,38 L580,25 H620 L634,25 L646,12 L660,38 L672,25 H1200" fill="none" stroke="#C8577A" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="300 900" style="animation:trace 0s"/>
+<g class="c"><rect x="594" y="13" width="12" height="24" rx="3" fill="#8A2A56"/><rect x="588" y="19" width="24" height="12" rx="3" fill="#D9788F"/></g>
+</svg>

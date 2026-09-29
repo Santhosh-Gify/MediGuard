@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="MediGuard">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6EEF6"/><stop offset="1" stop-color="#E6D3E8"/></linearGradient>
+<radialGradient id="b1"><stop offset="0" stop-color="#D9788F" stop-opacity=".55"/><stop offset="1" stop-color="#D9788F" stop-opacity="0"/></radialGradient>
+<radialGradient id="b2"><stop offset="0" stop-color="#8A2A56" stop-opacity=".35"/><stop offset="1" stop-color="#8A2A56" stop-opacity="0"/></radialGradient>
+<linearGradient id="cross" gradientUnits="userSpaceOnUse" x1="-62" y1="0" x2="62" y2="0">
+<stop offset="0" stop-color="#6E1A42"/><stop offset=".5" stop-color="#8E2A58"/><stop offset=".5" stop-color="#D9788F"/><stop offset="1" stop-color="#EFA9B8"/></linearGradient>
+<linearGradient id="ring" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7A1E48"/><stop offset="1" stop-color="#E79AAC"/></linearGradient>
+<linearGradient id="ecg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B04468" stop-opacity="0"/><stop offset=".5" stop-color="#B04468"/><stop offset="1" stop-color="#B04468" stop-opacity="0"/></linearGradient>
+<clipPath id="r"><rect width="1200" height="420" rx="28"/></clipPath>
+</defs>
+<style>
+.t{font-family:'Poppins','Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes d1{0%,100%{transform:translate(0,0)}50%{transform:translate(70px,30px)}}
+@keyframes d2{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,-25px)}}
+@keyframes flow{to{stroke-dashoffset:-730}}
+@keyframes flow2{to{stroke-dashoffset:482}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes ecg{0%{stroke-dashoffset:1400;opacity:1}65%{stroke-dashoffset:0;opacity:1}90%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes tw{0%,100%{opacity:.2}50%{opacity:.9}}
+.rise{animation:rise 1s cubic-bezier(.2,.8,.2,1) both}
+</style>
+<g clip-path="url(#r)">
+<rect width="1200" height="420" fill="url(#bg)"/>
+<circle cx="180" cy="90" r="230" fill="url(#b1)" style="animation:d1 12s ease-in-out infinite"/>
+<circle cx="1050" cy="330" r="260" fill="url(#b2)" style="animation:d2 14s ease-in-out infinite"/>
+<g fill="#B04468">
+<circle cx="130" cy="300" r="4" style="animation:tw 3s infinite"/><circle cx="260" cy="120" r="3" style="animation:tw 4s .8s infinite"/>
+<circle cx="980" cy="110" r="4" style="animation:tw 3.5s .3s infinite"/><circle cx="1090" cy="230" r="3" style="animation:tw 4.5s 1.2s infinite"/>
+<circle cx="880" cy="60" r="2.5" style="animation:tw 3s 1.6s infinite"/><circle cx="330" cy="330" r="2.5" style="animation:tw 5s .5s infinite"/>
+</g>
+<g transform="translate(600,132)"><g style="animation:float 6s ease-in-out infinite">
+<g transform="translate(14,28) rotate(-32)" fill="none" stroke-linecap="round">
+<ellipse rx="118" ry="52" stroke="url(#ring)" stroke-width="13" stroke-dasharray="430 300" style="animation:flow 6s linear infinite"/>
+<ellipse rx="102" ry="42" stroke="#C8577A" stroke-opacity=".7" stroke-width="5" stroke-dasharray="220 262" style="animation:flow2 7s linear infinite"/>
+</g>
+<g transform="translate(-22,-28)"><rect x="-26" y="-62" width="52" height="124" rx="11" fill="url(#cross)"/><rect x="-62" y="-26" width="124" height="52" rx="11" fill="url(#cross)"/></g>
+</g></g>
+<text class="t rise" x="600" y="322" text-anchor="middle" font-size="66" font-weight="700" style="animation-delay:.3s"><tspan fill="#6E1A42">Medi</tspan><tspan fill="#C8577A" dx="14">guard</tspan></text>
+<text class="t rise" x="600" y="360" text-anchor="middle" font-size="19" font-weight="500" fill="#8A2A56" letter-spacing="1.5" style="animation-delay:.9s">Caretaker manages  ·  Patient taps  ·  Doctor understands</text>
+<path d="M0,396 H420 L440,396 L456,372 L474,414 L494,352 L512,396 L532,396 H1200" fill="none" stroke="url(#ecg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1400" style="animation:ecg 5s ease-in-out infinite"/>
+</g></svg>
